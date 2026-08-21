@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merdeka X Malaysia Challenge 2026</title>
+<style>
+  :root{
+    --navy:#24359a;
+    --navy-dark:#1c2b82;
+    --blue:#6373b7;
+    --gold:#d6a52c;
+    --gold-light:#fff4b8;
+    --bg:#f6f7fb;
+    --line:#d8dced;
+    --text:#2d2f38;
+    --muted:#7c86aa;
+    --white:#fff;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--text);
+  }
+
+  .page{
+    width:min(1280px, calc(100% - 32px));
+    margin:18px auto 40px;
+  }
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(135deg,#26379e 0%,#3043ad 100%);
+    border-radius:24px;
+    padding:28px 30px 24px;
+    color:#fff;
+    box-shadow:0 10px 28px rgba(34,48,130,.16);
+    position:relative;
+    overflow:hidden;
+  }
+
+  .hero:after{
+    content:"🇲🇾";
+    position:absolute;
+    right:34px;
+    top:16px;
+    font-size:92px;
+    opacity:.08;
+    transform:rotate(-8deg);
+  }
+
+  .hero-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    position:relative;
+    z-index:1;
+  }
+
+  .title{
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+
+  .title .flag{font-size:35px}
+  h1{
+    margin:0;
+    font-size:38px;
+    line-height:1.05;
+    font-weight:800;
+    letter-spacing:-1px;
+  }
+
+  .subtitle{
+    margin-top:15px;
+    font-size:19px;
+    color:#eef0ff;
+  }
+
+  .subtitle strong{color:#ffd45a}
+
+  .lang{
+    border:1px solid rgba(255,255,255,.35);
+    background:rgba(255,255,255,.12);
+    border-radius:22px;
+    padding:9px 14px;
+    font-weight:700;
+    white-space:nowrap;
+  }
+
+  .hero-actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:22px;
+    position:relative;
+    z-index:1;
+  }
+
+  .hero-btn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:9px;
+    min-height:42px;
+    border-radius:22px;
+    border:1px solid rgba(255,255,255,.35);
+    background:rgba(255,255,255,.16);
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    cursor:pointer;
+    pointer-events:auto;
+    position:relative;
+    z-index:10;
+  }
+
+  .hero-btn:hover{background:rgba(255,255,255,.24)}
+
+  /* TABLE */
+  .challenge-table{
+    margin-top:16px;
+    background:#fff;
+    border-radius:0;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(30,42,100,.07);
+  }
+
+  .table-head,
+  .challenge-row{
+    display:grid;
+    grid-template-columns:145px 1fr 120px;
+  }
+
+  .table-head{
+    background:var(--navy-dark);
+    color:#fff;
+    font-weight:800;
+    text-transform:uppercase;
+    min-height:84px;
+    align-items:center;
+  }
+
+  .table-head > div,
+  .challenge-row > div{
+    padding:18px 16px;
+  }
+
+  .table-head .points{text-align:right}
+
+  .challenge-row{
+    min-height:104px;
+    border-bottom:1px solid var(--line);
+    align-items:center;
+    background:#fff;
+  }
+
+  .challenge-row.booster{
+    border-top:3px solid var(--gold);
+  }
+
+  .week-code{
+    font-size:23px;
+    font-weight:800;
+    color:var(--blue);
+  }
+
+  .week-date{
+    display:block;
+    margin-top:9px;
+    color:#8790ad;
+    font-size:16px;
+  }
+
+  .challenge-name{
+    font-size:21px;
+    font-weight:800;
+    color:var(--blue);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+
+  .challenge-desc{
+    margin-top:8px;
+    color:#929bb7;
+    font-size:16px;
+    line-height:1.55;
+  }
+
+  .points{
+    color:var(--blue);
+    font-size:21px;
+    font-weight:800;
+    text-align:right;
+  }
+
+  /* INFO */
+  .section{
+    margin-top:22px;
+    background:#fff;
+    border-radius:16px;
+    padding:24px;
+    box-shadow:0 5px 18px rgba(30,42,100,.06);
+  }
+
+  .section h2{
+    margin:0 0 14px;
+    color:var(--navy-dark);
+    font-size:25px;
+  }
+
+  .intro{
+    background:var(--gold-light);
+    border:1px solid #eadb7b;
+    border-radius:12px;
+    padding:20px;
+    line-height:1.65;
+  }
+
+  .intro strong{color:var(--navy-dark)}
+
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:16px;
+  }
+
+  .card{
+    border:1px solid #dce2f3;
+    border-radius:14px;
+    padding:18px;
+    background:#fbfcff;
+  }
+
+  .card h3{
+    margin:0 0 9px;
+    color:var(--navy-dark);
+    font-size:18px;
+  }
+
+  .card p{
+    margin:0;
+    color:#68708f;
+    line-height:1.55;
+  }
+
+  .points-box{
+    margin-top:18px;
+    border-left:5px solid var(--gold);
+    background:#fffbea;
+    padding:15px 18px;
+    border-radius:8px;
+  }
+
+  .points-box strong{color:#d24736}
+
+  /* RESPONSIVE */
+  @media(max-width:850px){
+    .page{width:min(100% - 18px, 700px)}
+    h1{font-size:30px}
+    .table-head,
+    .challenge-row{grid-template-columns:95px 1fr 78px}
+    .table-head > div,
+    .challenge-row > div{padding:14px 10px}
+    .challenge-name{font-size:17px}
+    .challenge-desc{font-size:14px}
+    .week-code{font-size:19px}
+    .week-date{font-size:13px}
+    .points{font-size:18px}
+    .cards{grid-template-columns:1fr}
+  }
+
+  @media(max-width:560px){
+    .hero{padding:22px 18px}
+    .hero-top{align-items:flex-start}
+    .lang{font-size:13px}
+    h1{font-size:25px}
+    .subtitle{font-size:15px}
+    .hero-actions{grid-template-columns:1fr}
+    .table-head{min-height:58px}
+    .table-head,
+    .challenge-row{grid-template-columns:76px 1fr 62px}
+    .challenge-row{min-height:120px}
+    .table-head > div,
+    .challenge-row > div{padding:12px 8px}
+    .table-head{font-size:12px}
+    .challenge-name{font-size:15px}
+    .challenge-desc{font-size:13px}
+    .week-code{font-size:17px}
+    .week-date{font-size:12px}
+    .points{font-size:16px}
+  }
+</style>
+
+<style>
+  .accordion-wrap{
+    margin-top:16px;
+    border-radius:16px;
+    overflow:hidden;
+  }
+  .week-tab{
+    background:#fff;
+    border-bottom:1px solid #d8dced;
+  }
+  .week-tab:first-child{
+    border-radius:14px 14px 0 0;
+  }
+  .week-tab:last-child{
+    border-radius:0 0 14px 14px;
+  }
+  .week-tab.booster{
+    border-top:3px solid #d6a52c;
+  }
+  .week-header{
+    width:100%;
+    border:0;
+    background:#fff;
+    color:#24359a;
+    display:grid;
+    grid-template-columns:145px 1fr 100px;
+    align-items:center;
+    text-align:left;
+    padding:17px 16px;
+    cursor:pointer;
+    font-family:inherit;
+  }
+  .week-header:hover{background:#f8f9ff}
+  .week-header.open{background:#fff4b8}
+  .week-arrow{
+    display:inline-block;
+    margin-right:6px;
+    font-size:16px;
+    transition:transform .2s ease;
+  }
+  .week-header.open .week-arrow{transform:rotate(90deg)}
+  .week-label{
+    font-size:21px;
+    font-weight:800;
+  }
+  .week-date{
+    display:block;
+    margin-top:7px;
+    color:#6373b7;
+    font-size:15px;
+    font-weight:600;
+  }
+  .week-title{
+    font-size:20px;
+    font-weight:800;
+  }
+  .week-desc{
+    margin-top:6px;
+    color:#68739e;
+    font-size:15px;
+    line-height:1.45;
+  }
+  .week-points{
+    text-align:right;
+    font-size:20px;
+    font-weight:800;
+  }
+  .week-content{
+    display:none;
+    background:#fff4b8;
+    padding:4px 16px 20px;
+  }
+  .week-content.open{display:block}
+  .detail-link{
+    display:inline-block;
+    margin:8px 0 18px 145px;
+    color:#162b91;
+    font-weight:800;
+    text-decoration:none;
+  }
+  .detail-link:hover{text-decoration:underline}
+  .step-title{
+    font-weight:800;
+    color:#222;
+    margin:0 0 10px;
+  }
+  .step-title + .detail-card{margin-bottom:14px}
+  .detail-card{
+    background:#eef0fb;
+    border:1px solid #cbd2ef;
+    border-left:5px solid #24359a;
+    border-radius:10px;
+    padding:13px 15px;
+    margin:7px 0;
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:8px 15px;
+  }
+  .detail-card.pink{
+    background:#ffe8f0;
+    border-color:#f0b8ca;
+    border-left-color:#d91c63;
+  }
+  .detail-card.green{
+    background:#edf8ef;
+    border-color:#b8dfc0;
+    border-left-color:#159447;
+  }
+  .detail-card h4{
+    margin:0;
+    color:#17308f;
+    font-size:17px;
+  }
+  .detail-card.pink h4{color:#c7165a}
+  .detail-card.green h4{color:#168849}
+  .detail-card p{
+    margin:6px 0 0;
+    color:#59658d;
+    line-height:1.45;
+  }
+  .detail-points{
+    font-weight:800;
+    color:#183392;
+    font-size:18px;
+    white-space:nowrap;
+  }
+  .bonus{
+    display:inline-block;
+    background:#d6a52c;
+    color:#fff;
+    border-radius:5px;
+    padding:2px 8px;
+    font-size:12px;
+    font-weight:900;
+    margin-right:6px;
+  }
+  .copy-row{
+    grid-column:1 / -1;
+    border-top:1px solid #f0b8ca;
+    margin:3px -15px -13px;
+    padding:9px 15px;
+    color:#c7165a;
+    font-weight:800;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .copy-btn{
+    border:0;
+    background:transparent;
+    color:#c7165a;
+    font-weight:800;
+    cursor:pointer;
+    font-size:14px;
+  }
+  .accordion-note{
+    margin:10px 0 0;
+    color:#66709a;
+    font-size:13px;
+  }
+
+  @media(max-width:850px){
+    .week-header{grid-template-columns:95px 1fr 78px;padding:14px 10px}
+    .week-label{font-size:18px}
+    .week-title{font-size:17px}
+    .week-desc{font-size:13px}
+    .week-points{font-size:17px}
+    .detail-link{margin-left:95px}
+  }
+  @media(max-width:560px){
+    .week-header{grid-template-columns:72px 1fr 60px;padding:12px 8px}
+    .week-label{font-size:15px}
+    .week-date{font-size:11px}
+    .week-title{font-size:14px}
+    .week-desc{font-size:12px}
+    .week-points{font-size:15px}
+    .week-content{padding:4px 9px 15px}
+    .detail-link{margin-left:0;font-size:13px}
+    .detail-card{grid-template-columns:1fr auto;padding:11px}
+  }
+</style>
+</head>
+
+<body>
+<div class="page">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <div class="title">
+          <span class="flag">🇲🇾</span>
+          <h1>Merdeka X Malaysia<br>Challenge 2026</h1>
+        </div>
+        <div class="subtitle">
+          <strong>3-week</strong> · 31 Aug – 20 Sept 2026
+        </div>
+      </div>
+      <div class="lang">EN⌄</div>
+    </div>
+
+    <div class="hero-actions">
+
+      <a class="hero-btn"
+         href="https://zuscoffee.sg.larksuite.com/share/base/form/shrlgiOeCHqQWEL3XrzF9WFZ11e"
+         target="_blank"
+         rel="noopener noreferrer"
+         onclick="window.open(this.href, '_blank'); return false;">
+        📋 Lark Base Tracker
+      </a>
+
+      <a class="hero-btn"
+         href="https://zuscoffee.sg.larksuite.com/share/base/form/shrlgrFdPr4iycBZIg7NyOqTWUh"
+         target="_blank"
+         rel="noopener noreferrer"
+         onclick="window.open(this.href, '_blank'); return false;">
+        📖 Official Wiki
+      </a>
+
+    </div>
+</header>
+
+  <main>
+    
+<section class="accordion-wrap" aria-label="Interactive weekly challenges">
+
+  <div class="week-tab">
+    <button class="week-header" onclick="toggleWeek(this)" aria-expanded="false">
+      <div>
+        <span class="week-arrow">▶</span>
+        <span class="week-label">W1</span>
+        <span class="week-date">31 Aug–6 Sept</span>
+      </div>
+      <div>
+        <div class="week-title">🧠 Quiz Trivia</div>
+        <div class="week-desc">Test your Malaysia knowledge with a 10-question Malaysian-themed quiz.</div>
+      </div>
+      <div class="week-points">100</div>
+    </button>
+
+    <div class="week-content">
+      <a class="detail-link" href="#" onclick="return false;">Click here to see week's wiki ↗</a>
+      <p class="step-title">① Complete the quiz</p>
+      <div class="detail-card">
+        <div>
+          <h4>🧠 Test Your Malaysia Knowledge</h4>
+          <p>Complete a 10-question Malaysian-themed quiz through AhaSlides.</p>
+        </div>
+        <div class="detail-points">+100</div>
+      </div>
+      <div class="detail-card">
+        <div>
+          <h4>📤 Submit Your Result</h4>
+          <p>Submit your final AhaSlides score and screenshot through the Lark Base Tracker.</p>
+        </div>
+        <div class="detail-points">Required</div>
+      </div>
+      <p class="accordion-note">Maximum 1 quiz attempt per participant.</p>
+    </div>
+  </div>
+
+  <div class="week-tab booster">
+    <button class="week-header" onclick="toggleWeek(this)" aria-expanded="false">
+      <div>
+        <span class="week-arrow">▶</span>
+        <span class="week-label">W2</span>
+        <span class="week-date">7–13 Sept</span>
+      </div>
+      <div>
+        <div class="week-title">🗣️ Cakap Malaysia</div>
+        <div class="week-desc">Create a 15–30 second video featuring Malaysian slang or dialect.</div>
+      </div>
+      <div class="week-points">100</div>
+    </button>
+
+    <div class="week-content">
+      <a class="detail-link" href="#" onclick="return false;">Click here to see week's wiki ↗</a>
+      <p class="step-title">① Pick Your Slang</p>
+      <div class="detail-card">
+        <div>
+          <h4>🗣️ Cakap It!</h4>
+          <p>Say the Malaysian slang/dialect, explain its meaning, and use it naturally in a sentence.</p>
+        </div>
+        <div class="detail-points">+100</div>
+      </div>
+      <div class="detail-card pink">
+        <div>
+          <h4>🎥 Upload Your Video</h4>
+          <p>Submit one 15–30 second video through the Lark Base Tracker.</p>
+        </div>
+        <div class="detail-points">Required</div>
+      </div>
+      <div class="detail-card pink">
+        <div>
+          <h4><span class="bonus">BONUS</span> Post on ZUS Moments</h4>
+          <p>Share your Cakap Malaysia moment for additional bonus points.</p>
+        </div>
+        <div class="detail-points">+10</div>
+        <div class="copy-row">
+          <span>#ZUSCakapMalaysia</span>
+          <button class="copy-btn" onclick="copyHashtag('#ZUSCakapMalaysia', this)">▣ Copy</button>
+        </div>
+      </div>
+      <p class="accordion-note">Maximum 1 submission. Video must be 15–30 seconds and clearly audible.</p>
+    </div>
+  </div>
+
+  <div class="week-tab">
+    <button class="week-header" onclick="toggleWeek(this)" aria-expanded="false">
+      <div>
+        <span class="week-arrow">▶</span>
+        <span class="week-label">W3</span>
+        <span class="week-date">14–20 Sept</span>
+      </div>
+      <div>
+        <div class="week-title">🍭 Jajan Throwback</div>
+        <div class="week-desc">Bring back a Malaysian childhood memory through your favourite jajan.</div>
+      </div>
+      <div class="week-points">100</div>
+    </button>
+
+    <div class="week-content">
+      <a class="detail-link" href="#" onclick="return false;">Click here to see week's wiki ↗</a>
+      <p class="step-title">① Pick Your Jajan</p>
+      <div class="detail-card">
+        <div>
+          <h4>🍭 Take Us Back!</h4>
+          <p>Show your favourite Malaysian jajan, tell us what it is, share a childhood memory, and tell us where you used to enjoy it.</p>
+        </div>
+        <div class="detail-points">+100</div>
+      </div>
+      <div class="detail-card">
+        <div>
+          <h4>📤 Submit & Share</h4>
+          <p>Upload your 15–30 second video to the Lark Base Tracker. ZUS Moments sharing is optional.</p>
+        </div>
+        <div class="detail-points">Required</div>
+      </div>
+      <p class="accordion-note">Maximum 1 submission per participant for Week 3.</p>
+    </div>
+  </div>
+
+  <div class="week-tab booster">
+    <button class="week-header" onclick="toggleWeek(this)" aria-expanded="false">
+      <div>
+        <span class="week-arrow">▶</span>
+        <span class="week-label">W1–W3</span>
+        <span class="week-date">31 Aug–20 Sept</span>
+      </div>
+      <div>
+        <div class="week-title">🚶 Malaysia Bergerak</div>
+        <div class="week-desc">Achieve 6,900+ steps per day and record your daily steps through Lark Base.</div>
+      </div>
+      <div class="week-points">105*</div>
+    </button>
+
+    <div class="week-content">
+      <a class="detail-link" href="#" onclick="return false;">Click here to see booster's wiki ↗</a>
+      <p class="step-title">① Move & Hustle</p>
+      <div class="detail-card">
+        <div>
+          <h4>🚶 Hit 6,900+ Steps</h4>
+          <p>Reach 6,900+ steps in a day throughout the 3-week challenge to earn the daily bonus.</p>
+        </div>
+        <div class="detail-points">+5/day</div>
+      </div>
+      <p class="step-title">② Track Your Steps</p>
+      <div class="detail-card green">
+        <div>
+          <h4>📱 Submit Through Lark Base</h4>
+          <p>Record your daily step count using your preferred step-counting app or device.</p>
+        </div>
+        <div class="detail-points">Up to 105</div>
+      </div>
+      <div class="detail-card pink">
+        <div>
+          <h4><span class="bonus">BONUS</span> Post on ZUS Moments</h4>
+          <p>Share your Malaysia Bergerak moment for additional bonus points.</p>
+        </div>
+        <div class="detail-points">+10</div>
+      </div>
+      <p class="accordion-note">Only 6,900+ steps qualify for the daily bonus.</p>
+    </div>
+  </div>
+
+</section>
+
+
+    <section class="section" id="details">
+      <h2>🇲🇾 Celebrate Malaysia Together!</h2>
+      <div class="intro">
+        <strong>Get ready for 3 weeks of Malaysian-themed challenges!</strong><br>
+        Complete weekly activities, move more through Malaysia Bergerak, and share
+        Malaysian-themed moments with your colleagues. Earn points, climb the leaderboard,
+        and celebrate what makes Malaysia special! 🎉
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>🧠 Week 1 — Quiz Trivia</h3>
+          <p>10 questions × 10 points = up to <strong>100 points</strong>. One attempt per participant.</p>
+        </div>
+
+        <div class="card">
+          <h3>🗣️ Week 2 — Cakap Malaysia</h3>
+          <p>15–30 second video: say a Malaysian slang/dialect, explain it, and use it naturally in a sentence.</p>
+        </div>
+
+        <div class="card">
+          <h3>🍭 Week 3 — Jajan Throwback</h3>
+          <p>Show a Malaysian childhood snack, explain it, and share why it brings back memories.</p>
+        </div>
+      </div>
+
+      <div class="points-box">
+        <strong>📊 Points:</strong> Weekly challenges can earn up to 300 points total.
+        Malaysia Bergerak can earn up to 105 points based on the campaign overview.
+        ZUS Moments can earn up to 30 additional points.
+        <br><br>
+        <strong>Maximum total: 435 points.</strong>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>📌 Submission Guidelines</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Weekly Challenges</h3>
+          <p>Submit your completed challenge through the Lark Base Tracker. Maximum 1 valid submission per weekly challenge.</p>
+        </div>
+        <div class="card">
+          <h3>Malaysia Bergerak</h3>
+          <p>Record daily steps through Lark Base. Only days reaching 6,900+ steps qualify for the daily bonus.</p>
+        </div>
+        <div class="card">
+          <h3>ZUS Moments</h3>
+          <p>Optional sharing activity. Valid Malaysian-themed posts can earn additional bonus points.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</div>
+
+<script>
+function toggleWeek(button){
+  const content = button.nextElementSibling;
+  const isOpen = button.classList.contains('open');
+
+  // Close all weeks first so the page behaves like an accordion.
+  document.querySelectorAll('.week-header.open').forEach(b => b.classList.remove('open'));
+  document.querySelectorAll('.week-content.open').forEach(c => c.classList.remove('open'));
+
+  // Re-open the selected week if it was previously closed.
+  if(!isOpen){
+    button.classList.add('open');
+    content.classList.add('open');
+  }
+}
+
+function copyHashtag(text, button){
+  navigator.clipboard.writeText(text).then(() => {
+    const old = button.textContent;
+    button.textContent = '✓ Copied';
+    setTimeout(() => button.textContent = old, 1200);
+  });
+}
+</script>
+</body>
+</html>
