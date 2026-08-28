@@ -668,6 +668,34 @@ details p {
   font-weight: 900 !important;
 }
 
+  <style>
+
+/* Your existing CSS above... */
+
+
+/* ADD THIS HERE */
+
+.leaderboard-progress {
+    background: #fff9df;
+    border-left: 4px solid #e0a800;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 10px;
+}
+
+.progression-line {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.tie-breaker {
+    margin-top: 10px;
+    padding: 10px 12px;
+    background: #fff1c7;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
 </style>
 </head>
 
@@ -843,9 +871,23 @@ details p {
     </div>
 
     <div class="leaderboard-progress">
-      <strong>Challenge Progression:</strong>
-      <span class="progression-line">Register → Week 1 Challenge → Week 1 Results → Week 2 Challenge → <strong>Top 69 Advance</strong> → Week 3 Challenge → <strong>Top 5 Winners</strong></span>
-    </div>
+
+  <strong>Challenge Progression:</strong>
+
+  <div class="progression-line">
+    Register → Week 1 Challenge → Week 1 Results → Week 2 Challenge →
+    <strong>Top 69 Advance</strong> → Week 3 Challenge →
+    <strong>Top 5 Winners</strong>
+  </div>
+
+  <div class="tie-breaker">
+    🏆 <strong>Tie-Breaker:</strong>
+    If participants have the same total points,
+    <strong>the participant who submits earlier will take priority.</strong>
+  </div>
+
+
+</div>
   </section>
 
   <section class="section">
