@@ -694,6 +694,140 @@ details p {
     background: #fff1c7;
     border-radius: 6px;
     font-size: 12px;
+    font-size: 12px;
+}
+
+
+/* MOBILE RESPONSIVE FIX */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.page {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.section,
+.header,
+footer {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.card,
+.prize-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.leaderboard-progress {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.progression-line {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.6;
+}
+
+.tie-breaker {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+
+/* PHONE */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    .page {
+        padding: 0 10px;
+    }
+
+    .header {
+        width: 100%;
+        padding: 18px;
+    }
+
+    .header h1,
+    h1 {
+        font-size: 24px;
+        line-height: 1.15;
+        max-width: 100%;
+    }
+
+    .header-sub {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+    }
+
+    .card,
+    .prize-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .leaderboard-progress {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .progression-line {
+        white-space: normal !important;
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .tie-breaker {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    img,
+    video,
+    iframe {
+        max-width: 100%;
+        height: auto;
+    }
+
 }
 
 </style>
@@ -861,7 +995,11 @@ details p {
       <article class="card">
         <h3>📈 Ranking</h3>
         <p>Higher total points = higher ranking.</p>
-        <p style="margin-top:5px;">If participants have the same points, <strong>earlier submission takes priority</strong>.</p>
+         <div class="tie-breaker">
+    🏆 <strong>Tie-Breaker:</strong>
+    If participants have the same total points,
+    <strong>the participant who submits earlier will take priority.</strong>
+  </div>
       </article>
 
       <article class="card">
@@ -878,12 +1016,6 @@ details p {
     Register → Week 1 Challenge → Week 1 Results → Week 2 Challenge →
     <strong>Top 69 Advance</strong> → Week 3 Challenge →
     <strong>Top 5 Winners</strong>
-  </div>
-
-  <div class="tie-breaker">
-    🏆 <strong>Tie-Breaker:</strong>
-    If participants have the same total points,
-    <strong>the participant who submits earlier will take priority.</strong>
   </div>
 
 
