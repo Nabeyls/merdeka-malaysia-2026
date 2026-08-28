@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MY Merdeka X Malaysia Challenge 2026</title>
+<style>
+:root{--navy:#172b83;--blue:#3048b7;--purple:#6951b4;--gold:#d6a52e;--goldbg:#fff8df;--pink:#d72b69;--pinkbg:#fff0f5;--green:#15965b;--ink:#273052;--muted:#70799b;--line:#dce2f1}
+*{box-sizing:border-box}html{overflow-x:hidden}body{margin:0;width:100%;min-width:0;overflow-x:hidden;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:var(--ink);background:linear-gradient(135deg,#f8f9ff,#eef1ff 55%,#fbfbff)}
+a{color:inherit}.page{width:min(1000px,calc(100% - 20px));margin:12px auto 38px}
+.header{position:relative;overflow:hidden;padding:16px 22px 18px;color:#fff;border-radius:18px 18px 13px 13px;background:linear-gradient(135deg,#172b83,#3149b8 67%,#624db0);box-shadow:0 10px 28px #1d2d7d2e}
+.header:after{content:"✦   ✧   ✦";position:absolute;right:22px;bottom:-14px;font-size:42px;letter-spacing:10px;color:#ffffff18}
+.header-top{display:flex;justify-content:space-between;align-items:center;gap:16px;position:relative;z-index:2}
+.brand-logo{width:120px;height:40px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;padding:5px 10px}
+.brand-logo img{width:100%;height:100%;object-fit:contain}.brand-fallback{color:#12318f;font-weight:900;font-size:12px}
+.lang{border:1px solid #ffffff8c;background:#ffffff14;color:#fff;border-radius:18px;padding:7px 14px;font-weight:700;font-size:11px}
+h1{position:relative;z-index:2;margin:12px 0 3px;font-size:29px;line-height:1.12;letter-spacing:-.7px}.header-sub{position:relative;z-index:2;margin:0;font-size:12px;color:#ffffffe8}.header-sub strong{color:#ffd55b}
+.banner{margin-top:10px;width:100%;overflow:hidden;border-radius:15px;background:#fff;border:1px solid var(--line);box-shadow:0 7px 22px #2233821a;aspect-ratio:1030/326}.banner video{display:block;width:100%;height:100%;object-fit:cover;background:#fff}
+.actions,.quick-secondary,.grid{display:grid;gap:10px}.actions{grid-template-columns:1fr 1fr;margin:10px 0}.action{min-height:42px;display:flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid #bfc9e9;border-radius:11px;background:#fff;color:var(--navy);font-weight:800;padding:10px 12px}.action.primary{background:linear-gradient(135deg,#1b328e,#4054c0);color:#fff;border-color:#1b328e}
+.quick-secondary{grid-template-columns:1fr 1fr;margin-bottom:10px}.quick-card{display:grid;grid-template-columns:34px 1fr 22px;align-items:center;gap:9px;text-decoration:none;border:1px solid var(--line);border-radius:12px;background:#fff;padding:10px 12px}.quick-card b{display:block;font-size:12px;color:var(--navy)}.quick-card small{display:block;margin-top:2px;color:var(--muted);font-size:10px}.quick-icon{width:30px;height:30px;display:grid;place-items:center;border-radius:8px;background:#eef2ff}.quick-arrow{color:var(--blue);font-size:17px;font-weight:800}
+.section{margin-top:10px;padding:14px;border:1px solid var(--line);border-radius:16px;background:#fffffff5;box-shadow:0 5px 18px #22338212}.section-title{margin:0 0 10px;font-size:16px;color:var(--navy);font-weight:900}.section-intro{margin:0 0 10px;color:var(--muted);line-height:1.5}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{min-width:0;border:1px solid #d8def0;border-radius:10px;background:#fbfcff;padding:11px}.card.blue{border-top:3px solid #4a62cf}.card.pink{border-top:3px solid var(--pink)}.card.gold{border-top:3px solid var(--gold)}.card.green{border-top:3px solid var(--green)}
+.card h3{margin:0 0 7px;font-size:12px;line-height:1.25;color:var(--navy)}.card p{margin:0;color:var(--muted);line-height:1.48;font-size:10.5px}.week{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}.week-no{font-weight:800;color:var(--blue);font-size:10px}.points{white-space:nowrap;color:var(--navy);font-weight:900;font-size:11px}.badge{display:inline-block;margin-top:8px;padding:4px 7px;border-radius:999px;background:#eef2ff;color:var(--blue);font-size:9px;font-weight:800}
+.link-button{display:inline-flex;align-items:center;justify-content:center;width:100%;margin-top:9px;min-height:32px;padding:7px 10px;border-radius:8px;background:#263c9c;color:#fff;text-decoration:none;font-size:10px;font-weight:800}
+.hashtag{margin-top:10px;padding:9px 10px;border-radius:9px;background:var(--pinkbg);border:1px solid #f4cada;color:var(--pink);font-weight:800;text-align:center;font-size:10px}.score{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:10px;padding:11px 13px;border-radius:10px;background:#f3f5ff;border:1px solid #dbe1f4;color:var(--navy)}.score small{color:var(--muted);line-height:1.4}
+.registration{margin-top:10px;padding:10px 12px;border-radius:9px;background:#f0f4ff;border:1px solid #ccd7f5;color:var(--navy);font-size:10.5px}.registration a{color:var(--blue);font-weight:900;text-decoration:none}
+.prize-value{display:block;margin-top:8px;color:var(--navy);font-size:10.5px;font-weight:800}.leaderboard-progress{margin-top:9px;padding:10px 12px;border-left:4px solid var(--gold);border-radius:8px;background:var(--goldbg);color:var(--ink);line-height:1.5;font-size:10px;overflow:hidden}.progression-title{display:block;margin-bottom:3px;color:var(--navy);font-weight:900}.progression-line{display:block;white-space:nowrap}.progression-line strong{font-weight:900;color:var(--navy)}
+.guidelines{display:grid;gap:7px}.guideline{display:grid;grid-template-columns:28px 1fr;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:9px;background:#fbfcff}.guideline b{color:var(--blue);font-size:10px}.guideline span{color:var(--muted);font-size:10px;line-height:1.45}
+.rules{border:1px solid #f2cbd4;border-radius:9px;background:#fff7f8;padding:10px 12px}.rules ol{margin:0;padding-left:18px}.rules li{margin:5px 0;color:var(--muted);line-height:1.45;font-size:10px}.rules strong{color:var(--navy)}
+.faq{border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line);padding:10px 0}summary{cursor:pointer;font-weight:800;color:var(--ink);font-size:10.5px}details p{margin:7px 0 0;color:var(--muted);line-height:1.5;font-size:10px}
+.footer{margin-top:10px;padding:11px;text-align:center;color:#fff;border-radius:10px;background:linear-gradient(90deg,#192d87,#4a3fa1);font-size:10px;font-weight:800}.footer span{color:#ffd55b}
+@media(max-width:800px){.page{width:calc(100% - 16px);margin-top:8px}h1{font-size:25px}.grid{grid-template-columns:1fr}.actions,.quick-secondary{grid-template-columns:1fr}.section{padding:13px}.progression-line{white-space:normal}}
+@media(max-width:560px){.page{width:calc(100% - 12px);margin:6px auto 25px}.header{padding:14px 15px 15px;border-radius:16px 16px 12px 12px}.brand-logo{width:112px;height:39px}.lang{padding:6px 11px;font-size:10px}h1{font-size:22px;line-height:1.12}.header-sub{font-size:10.5px;line-height:1.45}.banner{margin-top:7px;border-radius:12px}.actions{margin:7px 0;gap:7px}.action{min-height:40px;font-size:11px}.quick-secondary{gap:7px}.quick-card{padding:9px 10px}.section{margin-top:7px;padding:11px;border-radius:13px}.section-title{font-size:15px}.card{padding:10px}.card h3{font-size:11.5px}.card p{font-size:10px}.leaderboard-progress{padding:10px;font-size:9.5px}.progression-line{line-height:1.65}.score{display:block}.score>div:last-child{margin-top:7px;text-align:left!important}.rules li,.guideline span,details p{font-size:9.5px}.footer{font-size:9.5px}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="header">
+<div class="header-top">
+<div class="brand-logo">
+<img src="zus-coffee-logo.png" alt="ZUS COFFEE" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+<span class="brand-fallback" style="display:none">ZUS COFFEE</span>
+</div>
+<div class="lang">EN⌄</div>
+</div>
+<h1>MY Merdeka X Malaysia Challenge 2026</h1>
+<p class="header-sub"><strong>3-week challenge</strong> · 31 Aug – 20 Sept 2026 · Celebrate Malaysia together!</p>
+</header>
+
+<div class="banner">
+<video autoplay muted playsinline preload="auto" controls aria-label="Merdeka Day Challenge 2026 video">
+<source src="MERDEKA DAY CHALLENGE.mp4" type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
+</div>
+
+<div class="actions">
+<a class="action primary" href="https://zuscoffee.sg.larksuite.com/share/base/form/shrlgiOeCHqQWEL3XrzF9WFZ11e" target="_blank" rel="noopener noreferrer">📋 Lark Base Tracker ↗</a>
+<a class="action" href="https://zuscoffee.sg.larksuite.com/wiki/EC8ywI0ZkiXvF1kre5DlkcwOgMh?from=from_copylink" target="_blank" rel="noopener noreferrer">📖 Official Wiki ↗</a>
+</div>
+
+<div class="quick-secondary">
+<a class="quick-card" href="https://zuscoffee.sg.larksuite.com/share/base/form/shrlgrFdPr4iycBZIg7NyOqTWUh" target="_blank" rel="noopener noreferrer"><span class="quick-icon">📝</span><span><b>Registration Form</b><small>Open Registration Form ↗</small></span><span class="quick-arrow">→</span></a>
+<a class="quick-card" href="https://zuscoffee.sg.larksuite.com/share/base/form/shrlgJWIg99QRtOClhoz7XWNVgf" target="_blank" rel="noopener noreferrer"><span class="quick-icon">🧠</span><span><b>Week 1 Quiz Trivia</b><small>Play the Week 1 quiz ↗</small></span><span class="quick-arrow">→</span></a>
+</div>
+
+<section class="section">
+<h2 class="section-title">🇲🇾 How the Challenge Works</h2>
+<p class="section-intro">Complete the weekly Malaysian-themed challenges, submit your proof, and collect points throughout the 3-week challenge.</p>
+<div class="grid">
+<article class="card blue"><div class="week"><span class="week-no">W1 · 31 Aug – 6 Sept</span><span class="points">+100 pts</span></div><h3>🧠 Quiz Trivia</h3><p>Test your Malaysia knowledge through a 10-question Malaysian-themed quiz.</p><span class="badge">Maximum 100 pts</span><a class="link-button" href="https://zuscoffee.sg.larksuite.com/share/base/form/shrlgJWIg99QRtOClhoz7XWNVgf" target="_blank" rel="noopener noreferrer">🧠 Play Week 1 Quiz ↗</a></article>
+<article class="card pink"><div class="week"><span class="week-no">W2 · 7 – 13 Sept</span><span class="points">+100 pts</span></div><h3>🗣️ Cakap Malaysia</h3><p>Create a 15–30 second video featuring your Malaysian slang or dialect.</p><span class="badge">Maximum 100 pts</span></article>
+<article class="card gold"><div class="week"><span class="week-no">W3 · 14 – 20 Sept</span><span class="points">+100 pts</span></div><h3>🍭 Jajan Throwback</h3><p>Bring back a Malaysian childhood memory through your favourite jajan.</p><span class="badge">Maximum 100 pts</span></article>
+</div>
+<div class="card green" style="margin-top:9px"><div class="week"><div><div class="week-no">Every Week · ZUS Moments</div><h3 style="margin-top:4px">📸 Share your Merdeka moments</h3></div><span class="points">+15 pts / week</span></div><p>Share your participation or Malaysia-themed moments according to the weekly submission instructions.</p><div class="hashtag">#MerdekaXMalaysia2026 #ZUSkitapunya</div></div>
+<div class="score"><div><strong>🏆 Maximum: 345 points</strong><br><small>100 pts × 3 weekly challenges + 15 pts × 3 weekly ZUS Moments</small></div><div style="text-align:right"><strong>Top 69</strong><br><small>Progression based on total points</small></div></div>
+</section>
+
+<section class="section">
+<h2 class="section-title">📝 How to Register</h2>
+<div class="grid">
+<article class="card blue"><h3>1️⃣ Select Your Participation</h3><p>Join the <strong>Merdeka X Malaysia Challenge</strong> and complete the weekly challenges individually. ZUS Moments activities are optional.</p></article>
+<article class="card pink"><h3>2️⃣ Fill in Your Details</h3><p><strong>📋 For All Participants</strong><br>Base → ZUS ID → Lark Profile → Department / Outlet</p></article>
+<article class="card gold"><h3>3️⃣ Access the Tracker</h3><p>Once registered, use the Merdeka X Malaysia Challenge Tracker via Lark Base to record your participation and track your progress.</p></article>
+</div>
+<div class="registration">📋 <strong>Registration Form:</strong> <a href="https://zuscoffee.sg.larksuite.com/share/base/form/shrlgrFdPr4iycBZIg7NyOqTWUh" target="_blank" rel="noopener noreferrer">Open Registration Form ↗</a></div>
+</section>
+
+<section class="section">
+<h2 class="section-title">📌 Submission Guidelines</h2>
+<div class="grid">
+<article class="card blue"><h3>🗓️ Submit Weekly</h3><p>Complete and submit each weekly challenge separately through the Lark Base Tracker within its applicable challenge period.</p></article>
+<article class="card pink"><h3>🚫 No Combined Submission</h3><p>Week 1, Week 2 and Week 3 submissions <strong>cannot be combined</strong> and submitted at the end of the challenge.</p></article>
+<article class="card green"><h3>📸 ZUS Moments</h3><p>Posting is optional but rewarded with <strong>15 bonus points</strong> for each valid weekly submission.</p></article>
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">🏆 Leaderboard &amp; Prizes</h2>
+<div class="grid">
+<article class="card"><h3>🥇 Top 5 Winners</h3><p>Participants with the highest final accumulated points will be the winners.</p><span class="prize-value">RM50 Grab / TNG eWallet voucher</span><p style="margin-top:5px"><strong>One RM50 voucher for each winner.</strong></p></article>
+<article class="card"><h3>📈 Ranking</h3><p>Higher total points = higher ranking.</p><p style="margin-top:5px">If participants have the same points, <strong>earlier submission takes priority</strong>.</p></article>
+<article class="card"><h3>📅 Winner Announcement</h3><p>Winners will be announced on <strong>23 September 2026</strong>.</p></article>
+</div>
+<div class="leaderboard-progress"><span class="progression-title">Challenge Progression:</span><span class="progression-line">Register → Week 1 Challenge → Week 1 Results → Week 2 Challenge → <strong>Top 69 Advance</strong> → Week 3 Challenge → <strong>Top 5 Winners</strong></span></div>
+</section>
+
+<section class="section">
+<h2 class="section-title">📌 Important Guidelines</h2>
+<div class="guidelines">
+<div class="guideline"><b>01</b><span>Only valid submissions that follow the weekly challenge requirements will be counted.</span></div>
+<div class="guideline"><b>02</b><span>Submit your proof within the applicable weekly submission period.</span></div>
+<div class="guideline"><b>03</b><span>Points are subject to verification before they are reflected in the tracker.</span></div>
+<div class="guideline"><b>04</b><span>Each weekly activity has its own maximum point allocation. Extra submissions do not automatically increase the weekly cap.</span></div>
+<div class="guideline"><b>05</b><span>Participants should use the official submission channel and provide clear, genuine proof of participation.</span></div>
+<div class="guideline"><b>06</b><span>The organiser reserves the right to verify, reject, or adjust submissions that do not meet the challenge requirements.</span></div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">🚫 Rules &amp; Regulations</h2>
+<div class="rules"><ol>
+<li>All program activities must be conducted <strong>outside working hours</strong> and must not affect employees' productivity, attendance, or job responsibilities.</li>
+<li>The use of <strong>ZUS Coffee pantry supplies, outlet ingredients, equipment, or kitchenware</strong> for personal purposes under this program is strictly prohibited.</li>
+<li>Any health-related items obtained from ZUS Coffee outlets (e.g., dairy milk or plant-based milk) must be <strong>purchased through the proper payment process</strong>.</li>
+<li><strong>External food and beverages are not allowed</strong> in ZUS Coffee outlets under this program.</li>
+<li>Participants must comply with all applicable <strong>Company policies and guidelines</strong> while participating in this program.</li>
+<li>The Organiser reserves the right, with <strong>Management approval</strong>, to review, interpret, amend, or make changes to these rules and regulations and any matters relating to this program whenever necessary. The Organiser's decision shall be <strong>final and binding</strong> on all participants.</li>
+</ol></div>
+</section>
+
+<section class="section">
+<h2 class="section-title">❓ FAQ</h2>
+<div class="faq">
+<details><summary>▸ Where do I submit my challenge proof?</summary><p>Use the designated submission method stated in the weekly challenge instructions and complete your submission within the required period.</p></details>
+<details><summary>▸ How do I check my points?</summary><p>Use the Lark Base Tracker button above to view your recorded progress.</p></details>
+<details><summary>▸ Can I earn more than the weekly maximum?</summary><p>No. Each activity has a defined point cap. Additional submissions beyond the applicable cap do not create additional points.</p></details>
+<details><summary>▸ What happens if my submission is not valid?</summary><p>It may be rejected or excluded from the point calculation if it does not meet the stated challenge requirements.</p></details>
+</div>
+</section>
+
+<footer class="footer">🇲🇾 Get Ready, Get Set, Go! — <span>Register Today!</span> 🔥</footer>
+</div>
+</body>
+</html>
