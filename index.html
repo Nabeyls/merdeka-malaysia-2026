@@ -258,7 +258,6 @@ h1 {
 .quick-card small { display:block; margin-top:3px; color:var(--muted); font-size:10px; }
 .quick-arrow { margin-left:auto; color:var(--blue); font-size:18px; font-weight:800; }
 .registration { border-left:4px solid #263b9f; }
-.quiz { border-left:4px solid #e83d78; }
 .link-button {
   display:inline-flex;
   align-items:center;
@@ -668,6 +667,92 @@ details p {
   font-weight: 900 !important;
 }
 
+
+/* Mobile layout fixes */
+@media (max-width:560px) {
+  html, body {
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  .page {
+    width:calc(100% - 16px);
+    max-width:100%;
+    margin:0 auto;
+    padding:10px 0 28px;
+  }
+
+  .section {
+    width:100%;
+    max-width:100%;
+    padding:14px;
+    margin-bottom:12px;
+  }
+
+  .grid,
+  .steps {
+    width:100%;
+    max-width:100%;
+    grid-template-columns:1fr;
+  }
+
+  .card {
+    width:100%;
+    max-width:100%;
+    min-width:0;
+  }
+
+  /* Prevent the progression bar from being cut off on phones */
+  .leaderboard-progress {
+    width:100% !important;
+    max-width:100% !important;
+    overflow:hidden !important;
+    padding:10px 11px !important;
+    line-height:1.5 !important;
+  }
+
+  .leaderboard-progress > strong {
+    display:block !important;
+    margin:0 0 3px !important;
+    font-size:10px !important;
+  }
+
+  .leaderboard-progress .progression-line {
+    display:block !important;
+    white-space:normal !important;
+    overflow-wrap:anywhere !important;
+    word-break:normal !important;
+    font-size:9.5px !important;
+    line-height:1.55 !important;
+  }
+
+  .leaderboard-progress .progression-line strong {
+    white-space:normal !important;
+  }
+
+  /* Keep buttons and long text inside the phone width */
+  .link-button,
+  .quick-card,
+  .quick-card span,
+  .quick-card small {
+    max-width:100%;
+    min-width:0;
+  }
+
+  .link-button {
+    white-space:normal;
+  }
+
+  .section-title {
+    line-height:1.2;
+  }
+
+  .section-intro {
+    max-width:100%;
+  }
+}
+
 </style>
 </head>
 
@@ -710,11 +795,6 @@ details p {
     <a class="quick-card registration" href="https://zuscoffee.sg.larksuite.com/share/base/form/shrlgrFdPr4iycBZIg7NyOqTWUh" target="_blank" rel="noopener noreferrer">
       <span class="quick-icon">📝</span>
       <span><b>Registration Form</b><small>Open Registration Form ↗</small></span>
-      <span class="quick-arrow">→</span>
-    </a>
-    <a class="quick-card quiz" href="https://zuscoffee.sg.larksuite.com/share/base/form/shrlgJWIg99QRtOClhoz7XWNVgf" target="_blank" rel="noopener noreferrer">
-      <span class="quick-icon">🧠</span>
-      <span><b>Week 1 Quiz Trivia</b><small>Play the Week 1 quiz ↗</small></span>
       <span class="quick-arrow">→</span>
     </a>
   </div>
@@ -860,11 +940,6 @@ details p {
         <h3>📖 Official Wiki</h3>
         <p>Read the official challenge information and reference materials.</p>
         <a class="link-button" href="https://zuscoffee.sg.larksuite.com/wiki/EC8ywI0ZkiXvF1kre5DlkcwOgMh?from=from_copylink" target="_blank" rel="noopener noreferrer">Open Wiki ↗</a>
-      </article>
-      <article class="card gold">
-        <h3>🧠 Week 1 Quiz</h3>
-        <p>Ready to start? Open the Week 1 Quiz Trivia form and play.</p>
-        <a class="link-button" href="https://zuscoffee.sg.larksuite.com/share/base/form/shrlgJWIg99QRtOClhoz7XWNVgf" target="_blank" rel="noopener noreferrer">Play Quiz ↗</a>
       </article>
     </div>
   </section>
