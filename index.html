@@ -754,6 +754,272 @@ details p {
 }
 
 </style>
+
+<style id="week1-ranking-dashboard-css">
+.w1-dashboard{
+  margin:14px 0 18px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(22,37,111,.08);
+}
+.w1-head{
+  background:linear-gradient(135deg,#16256f 0%,#263b9f 58%,#7050b5 100%);
+  color:#fff;
+  padding:18px 20px;
+}
+.w1-head-row{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+}
+.w1-eyebrow{
+  margin:0 0 4px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  opacity:.82;
+}
+.w1-title{
+  margin:0;
+  font-size:24px;
+  line-height:1.2;
+  font-weight:800;
+}
+.w1-subtitle{
+  margin:7px 0 0;
+  font-size:12px;
+  line-height:1.5;
+  opacity:.9;
+}
+.w1-live{
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:7px 10px;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.06em;
+}
+.w1-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#72e0a5;
+  box-shadow:0 0 0 4px rgba(114,224,165,.14);
+}
+.w1-summary{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  padding:12px;
+  background:#f7f8fd;
+  border-bottom:1px solid var(--line);
+}
+.w1-stat{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:11px 12px;
+}
+.w1-stat-label{
+  color:var(--muted);
+  font-size:9px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+.w1-stat-value{
+  margin-top:3px;
+  color:var(--ink);
+  font-size:16px;
+  font-weight:800;
+}
+.w1-controls{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:12px 14px 8px;
+}
+.w1-table-title{
+  color:var(--ink);
+  font-size:13px;
+}
+.w1-table-title span{
+  display:block;
+  margin-top:2px;
+  color:var(--muted);
+  font-size:10px;
+  font-weight:500;
+}
+.w1-search{
+  width:min(300px,100%);
+  box-sizing:border-box;
+  padding:9px 11px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  outline:none;
+  color:var(--ink);
+  background:#fff;
+  font:500 11px Poppins,Arial,sans-serif;
+}
+.w1-search:focus{
+  border-color:#8b98dc;
+  box-shadow:0 0 0 3px rgba(52,73,183,.09);
+}
+.w1-table-wrap{
+  width:100%;
+  overflow-x:auto;
+}
+.w1-table{
+  width:100%;
+  min-width:720px;
+  border-collapse:collapse;
+  font-size:11px;
+}
+.w1-table th{
+  padding:10px 12px;
+  text-align:left;
+  color:#59648b;
+  background:#f5f6fb;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  white-space:nowrap;
+}
+.w1-table td{
+  padding:10px 12px;
+  border-bottom:1px solid #edf0f7;
+  color:#30395f;
+  vertical-align:middle;
+}
+.w1-table tbody tr:hover{
+  background:#fafbff;
+}
+.w1-table th:first-child,
+.w1-table td:first-child{
+  width:55px;
+  text-align:center;
+}
+.w1-table th:nth-child(5),
+.w1-table td:nth-child(5),
+.w1-table th:nth-child(6),
+.w1-table td:nth-child(6){
+  text-align:center;
+  white-space:nowrap;
+}
+.w1-rank{
+  font-weight:800;
+  color:#263b9f;
+}
+.w1-top1 td{background:rgba(231,184,75,.10);}
+.w1-top2 td{background:rgba(112,80,181,.06);}
+.w1-top3 td{background:rgba(60,154,112,.06);}
+.w1-name{
+  display:block;
+  color:#1e2a5a;
+  font-weight:700;
+  max-width:300px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.w1-category{
+  display:inline-block;
+  min-width:30px;
+  padding:4px 7px;
+  border-radius:999px;
+  text-align:center;
+  background:#eef1ff;
+  color:#3449b7;
+  font-size:9px;
+  font-weight:800;
+}
+.w1-points{
+  font-weight:800;
+  color:#263b9f;
+}
+.w1-total{
+  font-weight:800;
+  color:#16256f;
+}
+.w1-submitted{
+  color:#667095;
+  white-space:nowrap;
+  font-size:10px;
+}
+.w1-not-submitted{
+  color:#a0a7bc;
+  font-style:italic;
+}
+.w1-pagination{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:11px 14px;
+  background:#fbfbfe;
+  border-top:1px solid var(--line);
+}
+.w1-page-info{
+  color:var(--muted);
+  font-size:10px;
+}
+.w1-page-buttons{
+  display:flex;
+  gap:5px;
+}
+.w1-page-btn{
+  border:1px solid var(--line);
+  background:#fff;
+  color:#344064;
+  border-radius:8px;
+  padding:6px 9px;
+  cursor:pointer;
+  font:700 10px Poppins,Arial,sans-serif;
+}
+.w1-page-btn:hover:not(:disabled){
+  border-color:#9aa5de;
+  background:#f4f6ff;
+}
+.w1-page-btn:disabled{
+  opacity:.45;
+  cursor:not-allowed;
+}
+.w1-page-number{
+  min-width:28px;
+}
+.w1-note{
+  margin:0;
+  padding:11px 14px 13px;
+  color:#667095;
+  background:#fff;
+  border-top:1px solid #edf0f7;
+  font-size:10px;
+  line-height:1.55;
+}
+@media(max-width:700px){
+  .w1-head{padding:15px;}
+  .w1-title{font-size:20px;}
+  .w1-head-row{gap:10px;}
+  .w1-live{font-size:8px;padding:6px 8px;}
+  .w1-summary{grid-template-columns:repeat(2,1fr);}
+  .w1-controls{align-items:stretch;flex-direction:column;}
+  .w1-search{width:100%;}
+  .w1-name{max-width:190px;}
+}
+</style>
+
 </head>
 
 <body>
@@ -798,6 +1064,155 @@ details p {
       <span class="quick-arrow">→</span>
     </a>
   </div>
+
+<!-- WEEK 1 CURRENT RANKING DASHBOARD -->
+<section class="w1-dashboard" aria-label="Week 1 current ranking">
+  <div class="w1-head">
+    <div class="w1-head-row">
+      <div>
+        <p class="w1-eyebrow">🇲🇾 Merdeka X Malaysia Challenge 2026</p>
+        <h2 class="w1-title">🏆 Week 1 Current Ranking</h2>
+        <p class="w1-subtitle">Week 1 · 31 Aug – 6 Sept 2026 · Ranking by Week 1 points, with earlier submission time used for ties</p>
+      </div>
+      <div class="w1-live"><span class="w1-dot"></span> CURRENT</div>
+    </div>
+  </div>
+
+  <div class="w1-summary">
+    <div class="w1-stat">
+      <div class="w1-stat-label">Participants</div>
+      <div class="w1-stat-value">324</div>
+    </div>
+    <div class="w1-stat">
+      <div class="w1-stat-label">Week 1 Period</div>
+      <div class="w1-stat-value">31 Aug – 6 Sept</div>
+    </div>
+    <div class="w1-stat">
+      <div class="w1-stat-label">Highest W1 Score</div>
+      <div class="w1-stat-value">115 pts</div>
+    </div>
+    <div class="w1-stat">
+      <div class="w1-stat-label">Max Total Recorded</div>
+      <div class="w1-stat-value">115 pts</div>
+    </div>
+  </div>
+
+  <div class="w1-controls">
+    <div class="w1-table-title">
+      <strong>📊 Week 1 Ranking</strong>
+      <span>Higher Week 1 points = higher rank · Same Week 1 points = earlier submission ranks higher</span>
+    </div>
+    <input id="w1Search" class="w1-search" type="search" placeholder="🔎 Search Lark name or category..." aria-label="Search Week 1 ranking">
+  </div>
+
+  <div class="w1-table-wrap">
+    <table class="w1-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Lark Profile</th>
+          <th>Category</th>
+          <th>Submitted On</th>
+          <th>Week 1</th>
+          <th>Total Points</th>
+        </tr>
+      </thead>
+      <tbody id="week1RankingBody"></tbody>
+    </table>
+  </div>
+
+  <div class="w1-pagination">
+    <div id="w1PageInfo" class="w1-page-info"></div>
+    <div class="w1-page-buttons">
+      <button id="w1Prev" class="w1-page-btn" type="button">← Prev</button>
+      <button id="w1Next" class="w1-page-btn" type="button">Next →</button>
+    </div>
+  </div>
+
+  <div class="w1-note">
+    <strong>📌 Ranking rule:</strong> This dashboard uses the Week 1 score for ranking. If two participants have the same Week 1 points, the participant with the earlier <strong>Submitted On</strong> time ranks higher. Participants without a submission time are placed after participants with a recorded submission time at the same score.
+  </div>
+</section>
+
+<script>
+const week1Ranking = [{"rank":1,"name":"Mohamad Faiz Bin Mansor","category":"RO","submittedOn":"2026-08-31 11:32","week1":115,"total":115},{"rank":2,"name":"Ng Ming Yaw","category":"RO","submittedOn":"2026-08-31 12:03","week1":115,"total":115},{"rank":3,"name":"Nur Alia Binti Mohd Amirrudin","category":"HQ","submittedOn":"2026-08-31 12:41","week1":115,"total":115},{"rank":4,"name":"NURHANIF FARIEZ BIN ABD RAHAMAN","category":"RO","submittedOn":"2026-08-31 13:21","week1":115,"total":115},{"rank":5,"name":"Syed Mohd Zulfadzil Bin Syed Yahaya","category":"RO","submittedOn":"2026-08-31 14:22","week1":115,"total":115},{"rank":6,"name":"Aris Bin Ismail","category":"RO","submittedOn":"2026-08-31 14:36","week1":115,"total":115},{"rank":7,"name":"Razin Naif Bin Zainal","category":"RO","submittedOn":"2026-08-31 15:40","week1":115,"total":115},{"rank":8,"name":"AHMAD FIRDAUS BIN AZMAN","category":"RO","submittedOn":"2026-08-31 17:31","week1":115,"total":115},{"rank":9,"name":"Ameer Shazwan Bin Muhammad Yusri Wong","category":"RO","submittedOn":"2026-08-31 17:57","week1":115,"total":115},{"rank":10,"name":"RADZIYAH BINTI MOHD RASHDAN","category":"RO","submittedOn":"2026-08-31 17:59","week1":115,"total":115},{"rank":11,"name":"Nur Syafiqah Balqis Binti Hashim","category":"RO","submittedOn":"2026-08-31 18:02","week1":115,"total":115},{"rank":12,"name":"Yugendrra Kumar A/L Alagarsamy","category":"RO","submittedOn":"2026-08-31 18:11","week1":115,"total":115},{"rank":13,"name":"Nur Husna Athirah Binti Mohd Zulkifli","category":"RO","submittedOn":"2026-08-31 18:13","week1":115,"total":115},{"rank":14,"name":"Mimi Shahira Wahida Binti Che Lazim","category":"RO","submittedOn":"2026-08-31 18:54","week1":115,"total":115},{"rank":15,"name":"Qashrina Syahirah Binti Haizaimi","category":"RO","submittedOn":"2026-08-31 20:44","week1":115,"total":115},{"rank":16,"name":"Muhammad Z Bin Rozaini","category":"HQ","submittedOn":"2026-08-31 22:53","week1":115,"total":115},{"rank":17,"name":"Muhammad Ekmal Bin Azlan","category":"HQ","submittedOn":"2026-08-31 23:53","week1":115,"total":115},{"rank":18,"name":"Nur Syaza Syazwani Binti Mohd Suhaimi","category":"RO","submittedOn":"2026-09-01 15:11","week1":115,"total":115},{"rank":19,"name":"Annur Shaima Binti Azahar","category":"RO","submittedOn":"2026-09-01 15:56","week1":115,"total":115},{"rank":20,"name":"Charlotte Danyo Anak Douglas","category":"RO","submittedOn":"2026-09-02 10:46","week1":115,"total":115},{"rank":21,"name":"Chow Swee Kwan","category":"HQ","submittedOn":"2026-09-02 11:23","week1":115,"total":115},{"rank":22,"name":"Aleeya Affifah Binti Mohd Iszani","category":"HQ","submittedOn":"2026-09-02 12:23","week1":115,"total":115},{"rank":23,"name":"Wesmorlan Bin Banding","category":"HQ","submittedOn":"2026-09-02 14:46","week1":115,"total":115},{"rank":24,"name":"NOOR IZUANIZA BINTI RAZALI","category":"RO","submittedOn":"2026-09-02 14:56","week1":115,"total":115},{"rank":25,"name":"Ahmad Muhajirin Bin Hud","category":"RO","submittedOn":"2026-09-02 14:56","week1":115,"total":115},{"rank":26,"name":"Liyana Syamimi Bt Md Anwar","category":"RO","submittedOn":"2026-09-02 15:00","week1":115,"total":115},{"rank":27,"name":"MUHAMMAD SYAHRUL HAQEEM BIN RIDUAN","category":"RO","submittedOn":"2026-09-02 15:05","week1":115,"total":115},{"rank":28,"name":"Nureen Aresya Binti Zulkifli","category":"RO","submittedOn":"2026-09-02 15:09","week1":115,"total":115},{"rank":29,"name":"Siti Khadijah Binti Zainal Abidin","category":"RO","submittedOn":"2026-09-02 15:10","week1":115,"total":115},{"rank":30,"name":"Muhammad Afiq Bin Zailani","category":"HQ","submittedOn":"2026-09-02 15:23","week1":115,"total":115},{"rank":31,"name":"Zetty Nur Suhada Binti Sallehuddin","category":"HQ","submittedOn":"2026-09-02 15:33","week1":115,"total":115},{"rank":32,"name":"Aiman Hakim","category":"HQ","submittedOn":"2026-09-02 15:49","week1":115,"total":115},{"rank":33,"name":"Nuranisa Shima Binti Ahmad Daud","category":"RO","submittedOn":"2026-09-02 16:08","week1":115,"total":115},{"rank":34,"name":"Maslina Binti Jamli","category":"RO","submittedOn":"2026-09-02 16:27","week1":115,"total":115},{"rank":35,"name":"NORAINI BINTI MOHAMED","category":"RO","submittedOn":"2026-09-02 16:55","week1":115,"total":115},{"rank":36,"name":"MUHAMMAD FARISH HAIKAL BIN ZULKIFLI","category":"HQ","submittedOn":"2026-09-02 17:16","week1":115,"total":115},{"rank":37,"name":"Siti Irdina Binti Ibrahim","category":"RO","submittedOn":"2026-09-02 18:08","week1":115,"total":115},{"rank":38,"name":"Nurhusnina Kamillia Binti Wan Chik","category":"RO","submittedOn":"2026-09-02 19:05","week1":115,"total":115},{"rank":39,"name":"NUR ZAHIRAH BINTI ALI","category":"RO","submittedOn":"2026-09-02 19:24","week1":115,"total":115},{"rank":40,"name":"Nurhanida Asyiqin Binti Abdul Hamid","category":"RO","submittedOn":"2026-09-02 19:28","week1":115,"total":115},{"rank":41,"name":"Mohamad Rafie Bin Omar","category":"RO","submittedOn":"2026-09-02 19:33","week1":115,"total":115},{"rank":42,"name":"Omar Asyraf Bin Shahrin","category":"HQ","submittedOn":"2026-09-02 19:55","week1":115,"total":115},{"rank":43,"name":"MUHAMMAD KHAIRULANIS BIN ABD KHALID","category":"RO","submittedOn":"2026-09-02 20:17","week1":115,"total":115},{"rank":44,"name":"Nur Adina Eliya Binti Mutammim","category":"RO","submittedOn":"2026-09-02 20:25","week1":115,"total":115},{"rank":45,"name":"Nurul Fazilah Binti Poniran","category":"RO","submittedOn":"2026-09-02 20:31","week1":115,"total":115},{"rank":46,"name":"Muhammad Syamil Iman Bin Norazri","category":"RO","submittedOn":"2026-09-02 20:49","week1":115,"total":115},{"rank":47,"name":"Nur Aleez Dania Binti Mahaadin","category":"RO","submittedOn":"2026-09-02 21:55","week1":115,"total":115},{"rank":48,"name":"Nur Adlina Aqilah Binti Mohd Johari","category":"RO","submittedOn":"2026-09-03 00:07","week1":115,"total":115},{"rank":49,"name":"NUR ATHIRAH IYLIA BINTI MAT RADZI","category":"HQ","submittedOn":"2026-09-03 00:35","week1":115,"total":115},{"rank":50,"name":"Nor Saema Binti Jalil","category":"RO","submittedOn":"2026-09-03 00:55","week1":115,"total":115},{"rank":51,"name":"NUR HAFIZATON AQMA BINTI MOHD FUAD","category":"RO","submittedOn":"2026-09-03 01:29","week1":115,"total":115},{"rank":52,"name":"Nuratiqah Binti Emran","category":"RO","submittedOn":"2026-09-03 01:49","week1":115,"total":115},{"rank":53,"name":"Nurul Jannah Aqila Binti A.rahman","category":"HQ","submittedOn":"2026-09-03 09:47","week1":115,"total":115},{"rank":54,"name":"Marissa Nabiha Syazana Binti Mohamed Zalami","category":"RO","submittedOn":"2026-09-03 16:26","week1":115,"total":115},{"rank":55,"name":"Nur Suhaila Wahidah Binti Mustafa","category":"RO","submittedOn":"2026-09-03 22:41","week1":115,"total":115},{"rank":56,"name":"Muhammad Nur Tamimi Bin Mohd Hazlan","category":"RO","submittedOn":"2026-09-04 10:18","week1":115,"total":115},{"rank":57,"name":"MUHAMMAD ZULKIFLI BIN KAMARULZAMAN","category":"RO","submittedOn":"2026-09-05 10:46","week1":115,"total":115},{"rank":58,"name":"Muhammad William Rayyan Iskandar Bin Terry","category":"RO","submittedOn":"2026-09-07 19:52","week1":115,"total":115},{"rank":59,"name":"FADHILAH ABU SAMAH","category":"RO","submittedOn":"2026-08-31 17:10","week1":105,"total":105},{"rank":60,"name":"Nurul Amirah Binti Mohamad Azmi","category":"RO","submittedOn":"2026-09-02 16:22","week1":105,"total":105},{"rank":61,"name":"Siti Nurkhadijah Binti Shamsul Hadi","category":"RO","submittedOn":"2026-09-03 15:34","week1":105,"total":105},{"rank":62,"name":"Muhammad Aiman Bin Azahan","category":"HQ","submittedOn":"2026-08-31 10:28","week1":100,"total":100},{"rank":63,"name":"Nurul Ramizah Binti Ahmad Salleh","category":"RO","submittedOn":"2026-08-31 10:42","week1":100,"total":100},{"rank":64,"name":"Nasuha Binti Darman","category":"RO","submittedOn":"2026-08-31 11:27","week1":100,"total":100},{"rank":65,"name":"Nur Izah Izzati Binti Mohd Shafeini","category":"RO","submittedOn":"2026-08-31 11:47","week1":100,"total":100},{"rank":66,"name":"Nuraqila Binti Mohamad","category":"RO","submittedOn":"2026-08-31 11:53","week1":100,"total":100},{"rank":67,"name":"NURUL IZZATIE BINTI SALLEH","category":"RO","submittedOn":"2026-08-31 12:17","week1":100,"total":100},{"rank":68,"name":"Cho Xinyi","category":"HQ","submittedOn":"2026-08-31 13:05","week1":100,"total":100},{"rank":69,"name":"Nur Waheeda Binti Onn","category":"RO","submittedOn":"2026-08-31 13:27","week1":100,"total":100},{"rank":70,"name":"NUR KHALIDA BINTI AMI AZMAN","category":"RO","submittedOn":"2026-08-31 14:01","week1":100,"total":100},{"rank":71,"name":"Affza Farisha Nabilah Binti Azmi","category":"RO","submittedOn":"2026-08-31 17:04","week1":100,"total":100},{"rank":72,"name":"Siti Nursyafiqah Binti Ab.Razak","category":"RO","submittedOn":"2026-08-31 17:32","week1":100,"total":100},{"rank":73,"name":"Nur Syazwani Binti Abdul Latif","category":"RO","submittedOn":"2026-08-31 17:44","week1":100,"total":100},{"rank":74,"name":"Wan Nur Nadhirah Binti Wan Mohd Nasir","category":"RO","submittedOn":"2026-08-31 22:14","week1":100,"total":100},{"rank":75,"name":"Awangku Mohamad Khail Bin Ag Ku Mohd Nordin","category":"RO","submittedOn":"2026-08-31 22:59","week1":100,"total":100},{"rank":76,"name":"Scully Burno","category":"RO","submittedOn":"2026-09-01 12:10","week1":100,"total":100},{"rank":77,"name":"Noveiana Shazlin Binti Sudirman","category":"RO","submittedOn":"2026-09-01 16:33","week1":100,"total":100},{"rank":78,"name":"Ainul Maisarah Binti Mohd Aznil","category":"RO","submittedOn":"2026-09-02 10:46","week1":100,"total":100},{"rank":79,"name":"Akphiraq Sriphakdee A/L Chainarong Suvanpratum","category":"RO","submittedOn":"2026-09-02 10:57","week1":100,"total":100},{"rank":80,"name":"Sahlan Saidin","category":"HQ","submittedOn":"2026-09-02 14:42","week1":100,"total":100},{"rank":81,"name":"Ain Naziera Binti Hamid","category":"RO","submittedOn":"2026-09-02 14:43","week1":100,"total":100},{"rank":82,"name":"NUR BAITI BINTI MOHD NAIM","category":"RO","submittedOn":"2026-09-02 14:44","week1":100,"total":100},{"rank":83,"name":"Ahmad Nur Fayyadh Bin Mohmad","category":"RO","submittedOn":"2026-09-02 14:44","week1":100,"total":100},{"rank":84,"name":"Beebe Maisarah Binti Marazam","category":"RO","submittedOn":"2026-09-02 14:44","week1":100,"total":100},{"rank":85,"name":"Muhammad Alif Bin Asri","category":"RO","submittedOn":"2026-09-02 14:47","week1":100,"total":100},{"rank":86,"name":"AZRA FATINI BINTI MOHD YUSUFF","category":"HQ","submittedOn":"2026-09-02 14:48","week1":100,"total":100},{"rank":87,"name":"Nur Azreen Khalid","category":"RO","submittedOn":"2026-09-02 14:55","week1":100,"total":100},{"rank":88,"name":"MUHAMMAD ALIF FIRDAUS BIN ROSLAN","category":"RO","submittedOn":"2026-09-02 14:56","week1":100,"total":100},{"rank":89,"name":"Siti Zulaikha Binti Zulaihi","category":"RO","submittedOn":"2026-09-02 14:56","week1":100,"total":100},{"rank":90,"name":"Siti Nur Wazirah","category":"RO","submittedOn":"2026-09-02 14:58","week1":100,"total":100},{"rank":91,"name":"NOORAIMI BINTI MOHD AZHAR","category":"RO","submittedOn":"2026-09-02 15:10","week1":100,"total":100},{"rank":92,"name":"Muhammad Sanim Ashraf Bin Sobri","category":"RO","submittedOn":"2026-09-02 15:14","week1":100,"total":100},{"rank":93,"name":"Nur Afiqah Alya Binti Iskandar","category":"RO","submittedOn":"2026-09-02 15:29","week1":100,"total":100},{"rank":94,"name":"Siti Nur Syakirah Binti Zahri","category":"HQ","submittedOn":"2026-09-02 15:31","week1":100,"total":100},{"rank":95,"name":"Nurhafiza Binti Mohd Elmi","category":"HQ","submittedOn":"2026-09-02 15:36","week1":100,"total":100},{"rank":96,"name":"CHRISTINE LOW SUET KHING","category":"RO","submittedOn":"2026-09-02 15:40","week1":100,"total":100},{"rank":97,"name":"Jessy Richard","category":"RO","submittedOn":"2026-09-02 16:07","week1":100,"total":100},{"rank":98,"name":"Muhammad Faizal Bin Fairos","category":"RO","submittedOn":"2026-09-02 16:20","week1":100,"total":100},{"rank":99,"name":"Amirul Bin Richard","category":"RO","submittedOn":"2026-09-02 16:41","week1":100,"total":100},{"rank":100,"name":"Shahwal Bin Mohd Sabri","category":"RO","submittedOn":"2026-09-02 17:07","week1":100,"total":100},{"rank":101,"name":"Zul Nizam Bin Mohd Khairudin","category":"RO","submittedOn":"2026-09-02 17:16","week1":100,"total":100},{"rank":102,"name":"Siti Sarah Binti Abdullah","category":"RO","submittedOn":"2026-09-02 17:29","week1":100,"total":100},{"rank":103,"name":"NURATIQAH BINTI MOHD NOR","category":"RO","submittedOn":"2026-09-02 17:56","week1":100,"total":100},{"rank":104,"name":"Alya Syazwana","category":"HQ","submittedOn":"2026-09-02 18:34","week1":100,"total":100},{"rank":105,"name":"Muhammad Afif Afwan Bin Md Noh","category":"RO","submittedOn":"2026-09-02 18:38","week1":100,"total":100},{"rank":106,"name":"Nur 'Ain Nabila Binti Muhammad Ali","category":"RO","submittedOn":"2026-09-02 18:42","week1":100,"total":100},{"rank":107,"name":"Zatul Humaira Putri Binti Zul Helmi","category":"RO","submittedOn":"2026-09-02 19:07","week1":100,"total":100},{"rank":108,"name":"Nik Nur Faiqah Nazurah Binti Nik Mat Nasir","category":"RO","submittedOn":"2026-09-02 19:13","week1":100,"total":100},{"rank":109,"name":"Noraina Naziera Binti Roslan","category":"RO","submittedOn":"2026-09-02 19:56","week1":100,"total":100},{"rank":110,"name":"Muhammad Harith Bin Zunaidi","category":"RO","submittedOn":"2026-09-02 20:32","week1":100,"total":100},{"rank":111,"name":"Muhammad Harith Bin Zunaidi","category":"RO","submittedOn":"2026-09-02 20:32","week1":100,"total":100},{"rank":112,"name":"Muhammad Harith Bin Zunaidi","category":"RO","submittedOn":"2026-09-02 20:32","week1":100,"total":100},{"rank":113,"name":"Nureen Qasrina Binti Asmady @ Mady","category":"RO","submittedOn":"2026-09-02 20:36","week1":100,"total":100},{"rank":114,"name":"Fasha Farisha Binti Mustaffa","category":"RO","submittedOn":"2026-09-02 21:40","week1":100,"total":100},{"rank":115,"name":"Lok Yee Xin","category":"RO","submittedOn":"2026-09-02 21:42","week1":100,"total":100},{"rank":116,"name":"Siti Nur Maisarah Binti Mahli","category":"RO","submittedOn":"2026-09-02 22:12","week1":100,"total":100},{"rank":117,"name":"Nurin Yasmin Binti Muhammad Radzi","category":"RO","submittedOn":"2026-09-02 23:14","week1":100,"total":100},{"rank":118,"name":"Nur Syafiqah Nadhrah Binti Taini","category":"RO","submittedOn":"2026-09-02 23:15","week1":100,"total":100},{"rank":119,"name":"Alani Fatini Binti Azron Nizam","category":"RO","submittedOn":"2026-09-03 00:13","week1":100,"total":100},{"rank":120,"name":"Hanis Fitri Bin Mohamad Nori","category":"RO","submittedOn":"2026-09-03 00:51","week1":100,"total":100},{"rank":121,"name":"Muhammad Shahrul Anuar Bin Mohd Zambri","category":"RO","submittedOn":"2026-09-03 01:29","week1":100,"total":100},{"rank":122,"name":"Amierah Nabilah Binti Abdullah","category":"RO","submittedOn":"2026-09-03 02:10","week1":100,"total":100},{"rank":123,"name":"Nurhazwani Mohd Ridzuan Binti Abdul Majid","category":"RO","submittedOn":"2026-09-03 09:48","week1":100,"total":100},{"rank":124,"name":"Nor Fassya Irdanie Binti Baharum","category":"RO","submittedOn":"2026-09-03 10:17","week1":100,"total":100},{"rank":125,"name":"ANIQ HAKIMI BIN AZUAN","category":"RO","submittedOn":"2026-09-03 10:40","week1":100,"total":100},{"rank":126,"name":"Nur Elisa Qistina Binti Zainal Abidin","category":"RO","submittedOn":"2026-09-03 10:42","week1":100,"total":100},{"rank":127,"name":"Lutfirahman Bin Abdul Kadir","category":"RO","submittedOn":"2026-09-03 11:11","week1":100,"total":100},{"rank":128,"name":"Shafuddin Bin Muhammad Azhari","category":"RO","submittedOn":"2026-09-03 11:25","week1":100,"total":100},{"rank":129,"name":"Siti Noratikah Binti Rusli","category":"RO","submittedOn":"2026-09-03 11:27","week1":100,"total":100},{"rank":130,"name":"Nursyifaq Alieya Binti Ahmad Azri","category":"RO","submittedOn":"2026-09-03 12:11","week1":100,"total":100},{"rank":131,"name":"Nur Nazlyn Syahida Binti Jefry","category":"RO","submittedOn":"2026-09-03 13:32","week1":100,"total":100},{"rank":132,"name":"Aleesya Nur Iman Binti Mohd Hafiz","category":"RO","submittedOn":"2026-09-03 14:14","week1":100,"total":100},{"rank":133,"name":"Jesicca Gendu Anak Mukan","category":"RO","submittedOn":"2026-09-03 16:13","week1":100,"total":100},{"rank":134,"name":"Nurul Ain Syafiqah Binti Abdullah","category":"RO","submittedOn":"2026-09-03 16:49","week1":100,"total":100},{"rank":135,"name":"Hanisah Mawar Binti Syamsuar","category":"RO","submittedOn":"2026-09-03 16:55","week1":100,"total":100},{"rank":136,"name":"Iffah Nadhirah Binti Mohd Badrum","category":"RO","submittedOn":"2026-09-03 18:35","week1":100,"total":100},{"rank":137,"name":"NUR HAZIQAH NAWWARAH BINTI MOHD JAFFRI","category":"RO","submittedOn":"2026-09-03 21:47","week1":100,"total":100},{"rank":138,"name":"Nabila Azzahra Binti Jumaah","category":"RO","submittedOn":"2026-09-07 23:08","week1":100,"total":100},{"rank":139,"name":"SITI AISHAH BINTI SHUKRI","category":"RO","submittedOn":"2026-09-07 23:38","week1":100,"total":100},{"rank":140,"name":"SITI NORAIHAH BINTI ABD HALIM","category":"RO","submittedOn":"2026-09-08 17:03","week1":100,"total":100},{"rank":141,"name":"Nik Nur Nasuha Maisarah Binti Zulkifli","category":"RO","submittedOn":"2026-09-08 18:55","week1":100,"total":100},{"rank":142,"name":"Eng Vin Shern","category":"HQ","submittedOn":"2026-09-09 09:58","week1":100,"total":100},{"rank":143,"name":"KAIYISAH SABIHAH BINTI HUZAINI","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":144,"name":"Muhammad Shahiman Bin Shahabudin","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":145,"name":"Liyana Binti Ismail","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":146,"name":"Nurin Areesya Shaharul Hisham","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":147,"name":"Abdul Qayyum Bin Abd Samad","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":148,"name":"KAMIL HUSSIN BIN KANAI","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":149,"name":"Jazz Azhan","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":150,"name":"Nur Athirah Aqilah Binti Zuraini","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":151,"name":"Siti Hajar","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":152,"name":"Nur Zulaikha Binti Mohd Nazri","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":153,"name":"Alif Haikal Bin Mohamad Sayuthi","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":154,"name":"Nurul Afiqah Binti Nordin","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":155,"name":"Nazla Natasha Binti Rozman","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":156,"name":"MUHAMMAD AZRI BIN MIZRA","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":157,"name":"Mohd Amnizam Bin Amsain","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":158,"name":"Nur Qamarina Dania Binti Ahmad Ridwan","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":159,"name":"Nurul Izzah Binti Ahmad","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":160,"name":"MUHAMMAD SHUBHI BIN MD NOR","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":161,"name":"Danish Reezwan Bin Roslan","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":162,"name":"Nur Sharulneeza Hafizi Bin Hassan","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":163,"name":"MOHAMAD AIDIL FITRI BIN ABDUL KARIM","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":164,"name":"MOHAMMAD BIN KAMARODIN","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":165,"name":"NUR AINA SHAHIRA BINTI SAMSUDIN","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":166,"name":"Nurul Najwa Binti Abdul Aziz","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":167,"name":"FAIZ IZWAN BIN FADZIL","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":168,"name":"KIRITHARAN A/L MUNIANDY","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":169,"name":"Jerryca Elvie Binti Jorny Jorany","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":170,"name":"Raja Muhammad Rasul Bin Raja Mohd Fuad","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":171,"name":"Muhammad Izzuddin Bin Mazlan","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":172,"name":"Siti Mursyidah Binti Mohamad Malek","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":173,"name":"Nurulainnadhirah Binti Munap","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":174,"name":"Tuan Nur Amni Faiqah Binti Tuan Mahmud Fikri","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":175,"name":"Batrisyia Binti Zainurin","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":176,"name":"Muhammad Izzul Aiman Bin Hazman","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":177,"name":"SYAHIRA HANANI BINTI SHAHRIL ZIHAM","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":178,"name":"Mischelle Thanusha A/P Julius","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":179,"name":"Nurul Syafika Binti Nursaifulruzaman","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":180,"name":"Nur Khairunnissa Najihah Binti Mohd Azali","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":181,"name":"Nur Safiyah Izzati Binti Shamsuddin","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":182,"name":"Nur Amalina Izzati Binti Izhar","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":183,"name":"Nuratiqah Binti Mohd Ruslan Jais","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":184,"name":"Nurul Afiqah Binti Nordin","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":185,"name":"Nur Izzati Afiqah Binti Hasbibullah","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":186,"name":"Muhammad Rizareal Denial Bin Mohd Rashid","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":187,"name":"Noornazar Hakimi Bin Umar","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":188,"name":"MUHAMMAD KHAIRUL IDHAM BIN HANAFI","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":189,"name":"Nur Amira Aishah Binti Ahmad Akhir","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":190,"name":"Muhammad Hanif Ashman Bin Harun","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":191,"name":"Muhammad Norikmal Bin Rosli","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":192,"name":"NUR ALIYAH IRDINA BT ZULKIFFLY","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":193,"name":"Afiqah Naili Binti Azmi","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":194,"name":"MUHAMMAD ALIFF ZHARFAN BIN MOHAMAD FOUZI","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":195,"name":"Syahidah Adilah Binti Malek","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":196,"name":"Nur Atiqah Shahfira Binti Faizal Ashikin","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":197,"name":"Muhammad Nur Afiq Bin Shaiful Bahari","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":198,"name":"Muhammad Azrie Bin Khairul Annuar","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":199,"name":"Nurul Faizatul Akma Binti Kamarul Zamri","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":200,"name":"Siti Noranisa Binti Abdul Rahim","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":201,"name":"Muhammad Khairuddin Bin Zakaria","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":202,"name":"Aqil Shamrien Bin Samsul Bahari","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":203,"name":"NURUL AISHAH BINTI AHMAD","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":204,"name":"Fatin Madihah Binti Mohd Khir","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":205,"name":"Ahmad Nadzmi Adam Bin Mohd Adnan","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":206,"name":"Muhammad Danish Daniel","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":207,"name":"Muhammad Amirul Firdaus Bin Mohammad Johan","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":208,"name":"Muhammad Harith Afiq Bin Mohd Rafi","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":209,"name":"illiana najwa","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":210,"name":"Muhammad Alif Arsad Bin Md Nor Adam","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":211,"name":"NUR DINNIE SHUHADA BINTI ARSAD","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":212,"name":"Muhammad Imran Haniff Bin Mohamed Razif","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":213,"name":"Muhammad Nurzareeq Haiqal Bin Chik","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":214,"name":"Dian Saputeri Binte Zainuddin","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":215,"name":"Nurul Nabilah Huda Binti Mat Yasim","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":216,"name":"Billy Brandon Soon","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":217,"name":"Siti Najat Nasuha Binti Shariffuddin","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":218,"name":"Nurul Izyan Hanim Binti Hairul Rizal","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":219,"name":"Nur Haziqah Binti John","category":"HQ","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":220,"name":"Isnaafifi Nazleen Binti Mohd Ismail","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":221,"name":"MUHAMMAD SYAFIQ BIN SALIZAM","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":222,"name":"Nurul Farahana Hadawiyah Binti Azman","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":223,"name":"Abdul Azim Bin Abd Aziz","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":224,"name":"Nurul Izzah Izzati binti Mohd Rosdee","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":225,"name":"Puteri Khayrul Bariyah Binti Mukhlis","category":"RO","submittedOn":"2026-09-09 12:11","week1":100,"total":100},{"rank":226,"name":"Issabelle Subang Bruce","category":"RO","submittedOn":"2026-08-31 10:33","week1":90,"total":90},{"rank":227,"name":"Nur Aleeya Antasha Binti Sharudin","category":"RO","submittedOn":"2026-08-31 11:32","week1":90,"total":90},{"rank":228,"name":"Muhammad Naqib Syahmi Bin Rohaizi","category":"RO","submittedOn":"2026-08-31 18:09","week1":90,"total":90},{"rank":229,"name":"Nik Nor Shazalina Shafiqah Binti Mohamad Nor","category":"RO","submittedOn":"2026-08-31 21:32","week1":90,"total":90},{"rank":230,"name":"Poon Wai Shan","category":"HQ","submittedOn":"2026-09-02 01:00","week1":90,"total":90},{"rank":231,"name":"Jekry Jaumin","category":"RO","submittedOn":"2026-09-02 12:36","week1":90,"total":90},{"rank":232,"name":"‘amal Rabbani Bin Abdullah","category":"HQ","submittedOn":"2026-09-02 14:39","week1":90,"total":90},{"rank":233,"name":"Raja Nurdiyana Syairah Binti Raja Omar","category":"RO","submittedOn":"2026-09-02 14:56","week1":90,"total":90},{"rank":234,"name":"Ahmad Afiq Bin Ahmad Fadzi","category":"HQ","submittedOn":"2026-09-02 15:27","week1":90,"total":90},{"rank":235,"name":"Nur Zariefah Aishah Binti Mohamad Azizi","category":"RO","submittedOn":"2026-09-02 15:56","week1":90,"total":90},{"rank":236,"name":"Alyanis Darnia Binti Amir Azizi Shah","category":"RO","submittedOn":"2026-09-02 15:58","week1":90,"total":90},{"rank":237,"name":"Nickley Steve Saulus","category":"RO","submittedOn":"2026-09-02 16:01","week1":90,"total":90},{"rank":238,"name":"Nurul Khaliesa Binti Nordin","category":"RO","submittedOn":"2026-09-02 16:44","week1":90,"total":90},{"rank":239,"name":"Nurul Waheeda Binti Mohd Fahmi Izard","category":"RO","submittedOn":"2026-09-02 17:41","week1":90,"total":90},{"rank":240,"name":"Mohammad Sharizan Bin Yussop","category":"RO","submittedOn":"2026-09-03 01:23","week1":90,"total":90},{"rank":241,"name":"Muhammad Adam Bin Mohamad Rofli","category":"RO","submittedOn":"2026-09-03 11:13","week1":90,"total":90},{"rank":242,"name":"Ainaa Syazleen Binti Ani","category":"HQ","submittedOn":"2026-09-08 17:58","week1":90,"total":90},{"rank":243,"name":"Nur Amna Safiyyah Binti Ahmad Fahmy","category":"HQ","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":244,"name":"SHAHIMAH BINTI AHMAT","category":"RO","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":245,"name":"Ahmad Fuad Bin Mohamad Tahir","category":"RO","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":246,"name":"Nur Irsalina Binti Ismail","category":"RO","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":247,"name":"Norsahirah Binti Omar Dani","category":"RO","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":248,"name":"Nur Rabiatul Adawiyah Binti Zawawi","category":"HQ","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":249,"name":"Eizhan Hakim Bin Khahar","category":"HQ","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":250,"name":"UMI KALSOM BINTI SELAMAT","category":"HQ","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":251,"name":"JULIA NADIA BINTI JEMAIN","category":"RO","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":252,"name":"Nur Shahida Binti Mohd Rafi","category":"RO","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":253,"name":"Amirah Alnassir","category":"HQ","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":254,"name":"Hafiznurain Binti Mohamed Hapiz@Hafiz","category":"HQ","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":255,"name":"Muhammad Amirul Hakimi Bin Jusoh","category":"RO","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":256,"name":"Muhammad Fitri Bin Abdul Jabbar","category":"RO","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":257,"name":"Amir Muhammad Danish Bin Amir Shahril Rizal","category":"RO","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":258,"name":"Ahmad Farez Ameer Bin Azhar","category":"HQ","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":259,"name":"Aini Binti Limat","category":"RO","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":260,"name":"Nurfatin Binti Che Othman","category":"RO","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":261,"name":"Nur Alia Fatihah Binti Khamis","category":"RO","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":262,"name":"NABRYEAL LEEYROH ANAK RESI","category":"RO","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":263,"name":"Nurul Athirah Binti Rusman","category":"HQ","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":264,"name":"Mohamad Yuslizam","category":"RO","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":265,"name":"Nurul Alieya Natasha Binti Adnan","category":"RO","submittedOn":"2026-09-09 12:11","week1":90,"total":90},{"rank":266,"name":"Grace Ongkili","category":"RO","submittedOn":"2026-09-03 00:58","week1":80,"total":80},{"rank":267,"name":"Nur Nazariah Binti Jafri","category":"RO","submittedOn":"2026-09-03 18:00","week1":80,"total":80},{"rank":268,"name":"Alia Maysarah Binti Masudi","category":"RO","submittedOn":"2026-09-09 12:11","week1":80,"total":80},{"rank":269,"name":"Hairil Zuhri Bin Md Zaini","category":"HQ","submittedOn":"2026-09-09 12:11","week1":80,"total":80},{"rank":270,"name":"SITI NORAIN DILLAH","category":"RO","submittedOn":"2026-09-09 12:11","week1":70,"total":70},{"rank":271,"name":"Abdul Hafiz Izwan Bin Azlan","category":"RO","submittedOn":"2026-09-09 12:11","week1":70,"total":70},{"rank":272,"name":"Mohd Ariff Aiman Bin Mat Jaleh","category":"RO","submittedOn":"2026-09-09 12:11","week1":70,"total":70},{"rank":273,"name":"Muhammad Irfan Zikry Bin Saiful Nizam","category":"RO","submittedOn":"2026-09-09 12:11","week1":60,"total":60},{"rank":274,"name":"Nikkita Seth","category":"HQ","submittedOn":"2026-09-09 12:11","week1":60,"total":60},{"rank":275,"name":"Ayu Fadanah Binti Patoni","category":"RO","submittedOn":"2026-08-31 10:27","week1":50,"total":50},{"rank":276,"name":"Nur Alyaa Syafiqah Binti Mohd Azlan Shah","category":"RO","submittedOn":"2026-09-01 01:56","week1":0,"total":0},{"rank":277,"name":"Afieera Binti Ashabul Bahri","category":"RO","submittedOn":"2026-09-02 14:40","week1":0,"total":0},{"rank":278,"name":"Fatin Nurul Husna Binti Abd Khalid","category":"RO","submittedOn":"2026-09-02 16:49","week1":0,"total":0},{"rank":279,"name":"Nur Anis Syamila Binti Rohaizad","category":"RO","submittedOn":"2026-09-02 20:24","week1":0,"total":0},{"rank":280,"name":"Siti Nurnasuha Binti Zaidi","category":"RO","submittedOn":"2026-09-02 21:19","week1":0,"total":0},{"rank":281,"name":"Putera Aieyman Shafiq Bin Sabri","category":"RO","submittedOn":"2026-09-03 08:12","week1":0,"total":0},{"rank":282,"name":"Khadijah Binti T Qiamuddin","category":"RO","submittedOn":"2026-09-03 19:15","week1":0,"total":0},{"rank":283,"name":"Wan Nur Athirah Binti Abdullah","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":284,"name":"Muhammad Hamdani Bin Shahrullayani","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":285,"name":"Nur Syaqira Binti Rozlan","category":"HQ","submittedOn":null,"week1":0,"total":0},{"rank":286,"name":"Muhammad Harith Afifi Bin Muhammad Zahiri","category":"HQ","submittedOn":null,"week1":0,"total":0},{"rank":287,"name":"Ainul Afeeza Binti Pauzee","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":288,"name":"Muhammad Afham Bin Muhammad Sa'id","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":289,"name":"Jinny Cher","category":"HQ","submittedOn":null,"week1":0,"total":0},{"rank":290,"name":"Aizran Bin Amir","category":"HQ","submittedOn":null,"week1":0,"total":0},{"rank":291,"name":"Siti Nur Atieqah Asma Binti Roslan","category":"HQ","submittedOn":null,"week1":0,"total":0},{"rank":292,"name":"Navinah A/P Krishnamorthy","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":293,"name":"Muhammad Farid Azmar Bin Abdul Malek","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":294,"name":"Norshazaliza Binti Mohd Nazri","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":295,"name":"Muhammad Amir Hakimi Bin Mohd Amizu","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":296,"name":"Puteri Nur Aliya Binti Muhammad Noor Zaki","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":297,"name":"Clarence Anak Stanley Mike Ajah","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":298,"name":"Muhammad Najib Bin Mohd Pauzi","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":299,"name":"Ahmad Waliyyuddin Soolihiin Bin Noor Tarjudin","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":300,"name":"Nur Alia Munirah Binti Abd Rahim","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":301,"name":"Ain Amalina Binti Hussin","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":302,"name":"Aina Nabilah Binti Ishak","category":"HQ","submittedOn":null,"week1":0,"total":0},{"rank":303,"name":"Zuhier Saufi","category":"HQ","submittedOn":null,"week1":0,"total":0},{"rank":304,"name":"Siti Nurfatihah Binti Hussin","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":305,"name":"Nur Marlina Binti Abdullah","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":306,"name":"Nurul Hidayah Binti Buirin","category":"HQ","submittedOn":null,"week1":0,"total":0},{"rank":307,"name":"NOOR ATHIRAH AYUNI BINTI IBRAHIM","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":308,"name":"Nuraishah Binti Ishak","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":309,"name":"MUHAMMAD NURAZHAM BIN MD YUSOP","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":310,"name":"Dura Adibah Binti Roslan","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":311,"name":"Zulaikha Aleya Binti Abdullah","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":312,"name":"Helmi Walid Bin Ali Muis","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":313,"name":"Jushafira Faizura Binti Paizul","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":314,"name":"Syed Muhammad Hilmi Bin Syed Ayub","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":315,"name":"Nur Suraya Aini Binti Mohd Jamil","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":316,"name":"Nur Nabilah Binti Kamarul Zaman","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":317,"name":"Irdina Shazwani Binti Zakaria","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":318,"name":"Tham Yung Sin","category":"HQ","submittedOn":null,"week1":0,"total":0},{"rank":319,"name":"Muhammad Faiz Bin Mohamad Fadzli","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":320,"name":"SITI ADIBAH BINIT MOHD AZLI","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":321,"name":"Nur Atiqah Binti Abdullah","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":322,"name":"Anis Sofiya Binti Mohd Syamsuri","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":323,"name":"Nasri","category":"RO","submittedOn":null,"week1":0,"total":0},{"rank":324,"name":"Muhamad Iskandar Hakimi Bin Ruslan","category":"RO","submittedOn":null,"week1":0,"total":0}];
+
+(function(){
+  const body = document.getElementById("week1RankingBody");
+  const search = document.getElementById("w1Search");
+  const prev = document.getElementById("w1Prev");
+  const next = document.getElementById("w1Next");
+  const pageInfo = document.getElementById("w1PageInfo");
+  if(!body) return;
+
+  const pageSize = 25;
+  let currentPage = 1;
+  let filtered = [...week1Ranking];
+
+  function esc(v){
+    return String(v ?? "")
+      .replaceAll("&","&amp;")
+      .replaceAll("<","&lt;")
+      .replaceAll(">","&gt;")
+      .replaceAll('"',"&quot;")
+      .replaceAll("'","&#039;");
+  }
+
+  function formatSubmitted(v){
+    if(!v) return '<span class="w1-submitted w1-not-submitted">Not submitted</span>';
+    const d = new Date(v.replace(" ","T"));
+    if(Number.isNaN(d.getTime())) return '<span class="w1-submitted">'+esc(v)+'</span>';
+    return '<span class="w1-submitted">'+d.toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"})+' · '+d.toLocaleTimeString("en-MY",{hour:"2-digit",minute:"2-digit",hour12:false})+'</span>';
+  }
+
+  function render(){
+    const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
+    currentPage = Math.min(currentPage, totalPages);
+    const start = (currentPage - 1) * pageSize;
+    const rows = filtered.slice(start, start + pageSize);
+
+    body.innerHTML = rows.map(p => {
+      const medal = p.rank===1 ? "🥇" : p.rank===2 ? "🥈" : p.rank===3 ? "🥉" : p.rank;
+      const rowClass = p.rank<=3 ? "w1-top"+p.rank : "";
+      return `<tr class="${rowClass}">
+        <td><span class="w1-rank">${medal}</span></td>
+        <td><span class="w1-name" title="${esc(p.name)}">${esc(p.name || "—")}</span></td>
+        <td><span class="w1-category">${esc(p.category || "—")}</span></td>
+        <td>${formatSubmitted(p.submittedOn)}</td>
+        <td><span class="w1-points">${Number(p.week1) || 0} pts</span></td>
+        <td><span class="w1-total">${Number(p.total) || 0} pts</span></td>
+      </tr>`;
+    }).join("");
+
+    const from = filtered.length ? start + 1 : 0;
+    const to = Math.min(start + pageSize, filtered.length);
+    pageInfo.textContent = `Showing ${from}–${to} of ${filtered.length} participants · Page ${currentPage}/${totalPages}`;
+    prev.disabled = currentPage <= 1;
+    next.disabled = currentPage >= totalPages;
+  }
+
+  function applySearch(){
+    const q = search.value.trim().toLowerCase();
+    filtered = !q ? [...week1Ranking] : week1Ranking.filter(p =>
+      String(p.name).toLowerCase().includes(q) ||
+      String(p.category).toLowerCase().includes(q)
+    );
+    currentPage = 1;
+    render();
+  }
+
+  search.addEventListener("input", applySearch);
+  prev.addEventListener("click", () => {
+    if(currentPage > 1) { currentPage--; render(); }
+  });
+  next.addEventListener("click", () => {
+    const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
+    if(currentPage < totalPages) { currentPage++; render(); }
+  });
+
+  render();
+})();
+</script>
 
   <section class="section">
     <h2 class="section-title">🇲🇾 How the Challenge Works</h2>
